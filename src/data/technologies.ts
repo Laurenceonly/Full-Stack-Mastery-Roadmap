@@ -1,0 +1,15 @@
+export const technologies: Record<string, { name: string; logo: string }[]> = {
+  planning: [{ name: 'GitHub', logo: 'github' }],
+  html: [{ name: 'HTML', logo: 'html5' }],
+  css: [{ name: 'CSS', logo: 'css' }],
+  javascript: [{ name: 'JavaScript', logo: 'javascript' }],
+  typescript: [{ name: 'TypeScript', logo: 'typescript' }],
+  tailwind: [{ name: 'Tailwind CSS', logo: 'tailwindcss' }],
+  frontend: [{ name: 'React', logo: 'react' }, { name: 'Next.js', logo: 'nextdotjs' }],
+  backend: [{ name: 'Node.js', logo: 'nodedotjs' }, { name: 'Express', logo: 'express' }],
+  database: [{ name: 'PostgreSQL', logo: 'postgresql' }, { name: 'Prisma', logo: 'prisma' }],
+  integration: [{ name: 'Bruno', logo: 'bruno' }, { name: 'OWASP', logo: 'owasp' }],
+  mobile: [{ name: 'React Native', logo: 'react' }, { name: 'Expo', logo: 'expo' }],
+  testing: [{ name: 'Vitest', logo: 'vitest' }, { name: 'Testing Library', logo: 'testinglibrary' }],
+  devops: [{ name: 'Docker', logo: 'docker' }, { name: 'GitHub Actions', logo: 'github' }],
+};

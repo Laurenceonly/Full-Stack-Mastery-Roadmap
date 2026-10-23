@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test": "node --test tests/*.test.ts",
+    "prebuild": "npm test",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

@@ -1,41 +1,24 @@
+﻿@import "tailwindcss";
 
-@import "tailwindcss";
+:root { font-family: "Aptos", "Segoe UI", sans-serif; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; min-height: 100%; width: 100%; }
+body { min-width: 320px; background: #080d16; }
+button, input, select { font: inherit; }
+button, a, input, select { -webkit-tap-highlight-color: transparent; }
+button, input, select { touch-action: manipulation; }
+button { cursor: pointer; text-align: inherit; }
+button:disabled { cursor: default; }
+a { text-underline-offset: 3px; }
+button svg, a svg { flex-shrink: 0; }
+.workspace { --ground: #080d16; --paper: #0b121e; --raised: #111b2a; --ink: #eef2fb; --muted: #a0aec5; --line: #233044; --accent: #a77aff; --selected: #21163f; --success: #1bdfaa; --blue: #34bdff; --violet: #a578ff; --green: #1bdfaa; --amber: #ffc25c; --pink: #f77bce; --cyan: #24d9e5; color: var(--ink); background: var(--ground); min-height: 100dvh; color-scheme: dark; }
+.workspace :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.workspace ::selection { color: var(--ground); background: var(--accent); }
+.workspace { scrollbar-color: var(--line) var(--ground); }
+.workspace input { caret-color: var(--accent); }
 
-/* Global theme */
-:root {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #f4f4f5;
-  background-color: #09090b;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Global layout */
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-#root {
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-}
-
-body {
-  min-width: 320px;
-}
-
-#root {
-  min-height: 100vh;
-}
-
-/* Accessibility */
-:focus-visible {
-  outline: 2px solid #60a5fa;
-  outline-offset: 3px;
+/* Reserve the viewport scrollbar gutter so page changes keep the same width. */
+html { scrollbar-gutter: stable; }
+@supports not (scrollbar-gutter: stable) {
+  html { overflow-y: scroll; }
 }
