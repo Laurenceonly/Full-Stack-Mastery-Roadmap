@@ -8,8 +8,8 @@ This file is the session handoff. Read [KNOWLEDGE.md](KNOWLEDGE.md) for the proj
 
 ## Current checkpoint
 
-- Working branch: `feat/typed-catalog`, created from local `main` at `ad7227d`.
-- Checkpoint: local commit titled `feat: add typed curriculum and neon roadmap workspace` on `feat/typed-catalog`. Use `git log -1` for its hash. No push, PR, merge, or deployment has been performed.
+- Working branch: `main`. The implementation was developed on `feat/typed-catalog` from `ad7227d` and fast-forwarded into `main`.
+- Implementation checkpoint: `b2f7446` (`feat: add typed curriculum and neon roadmap workspace`), followed by this main-delivery log. Delivery target: `origin/main`, as explicitly requested. Inspect `git status` and `git log -1` when resuming. No PR or deployment was performed.
 - V2a typed catalog and validation are implemented. V2b grouped browsing and the reference-based neon redesign are implemented and browser-checked locally. Independent UI review returned ship with no material findings.
 - Catalog: 13 topics, 12 required and 1 optional (Tailwind CSS), 38 resource records, 11 named stages.
 - All nine original V1 topic IDs remain. New IDs: `html`, `css`, `javascript`, `tailwind`.
@@ -96,6 +96,14 @@ This file is the session handoff. Read [KNOWLEDGE.md](KNOWLEDGE.md) for the proj
 - Local browser outputs and temporary commit-message files remain ignored. No remote push or deployment was requested.
 - Next session: inspect `git status` and `git log -1`, read this log, then continue from the saved checkpoint.
 
+### 2026-10-23 — Delivery to main
+
+- User explicitly requested pushing the completed checkpoint to main, superseding the plan's normal PR workflow for this delivery.
+- Fetched origin and confirmed remote main remained at the foundation commit; it was an ancestor of the completed implementation. Switched to local main and fast-forwarded it to b2f7446 without rewriting history.
+- Recorded this delivery checkpoint in a documentation-only commit. Delivery is a direct push of main to origin/main; no force push, PR, or deployment is part of this action.
+- No application code changed during delivery. The recorded passing tests, lint, build, and browser checks remain applicable.
+- Next session: start on main, inspect git status and its tracking state, read this log, then continue with the documented V2c work when requested.
+
 ## Verification
 
 - Node version: `v24.22.1`.
@@ -113,7 +121,7 @@ This file is the session handoff. Read [KNOWLEDGE.md](KNOWLEDGE.md) for the proj
 
 ## Remaining work and next step
 
-The requested local implementation is complete and checked. The user authorized a local checkpoint commit titled `feat: add typed curriculum and neon roadmap workspace`. No PR, push, merge, or deployment has been performed. The local preview is available at `http://127.0.0.1:5173/` while the Vite process is running; otherwise start it with `npm.cmd run dev -- --host 127.0.0.1`.
+The requested local implementation is complete and checked. The user authorized checkpoint commit `b2f7446` and then a direct push to `main`. Local `main` contains the implementation and this delivery log. No PR or deployment was performed; verify branch tracking state when resuming. The local preview is available at `http://127.0.0.1:5173/` while the Vite process is running; otherwise start it with `npm.cmd run dev -- --host 127.0.0.1`.
 
 Next implementation milestone: V2c four-level status and versioned persistence with safe migration, reset, and validated export/import. Keep the original `roadmap-progress` key through migration. A full accessibility audit and real-device checks remain follow-up quality work. Expand umbrella topics into detailed curriculum in V2d. CI and deployment remain V2e.
 
